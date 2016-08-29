@@ -25,10 +25,10 @@
         <hr/>
         <div class="col-sm-8">
             <div class="col-sm-4 center-block">
-                <p><a class="btn btn-primary btn-block" href="javascript:;" drop-box-picker dbpicker-files="dpfiles">Dropbox Picker</a></p>
+                <p><a class="btn btn-primary btn-block" href="javascript:;" drop-box-picker on-dropbox-success="onDropboxSuccess(files)"  on-dropbox-cancel="onDropboxCancel()">Dropbox Picker</a></p>
             </div>
             <div class="col-sm-4 center-block">
-                <p><a class="btn btn-primary btn-block" href="javascript:;" box-picker boxpicker-files="boxfiles">Box Picker</a></p>
+                <p><a class="btn btn-primary btn-block" href="javascript:;" box-picker on-box-success="onBoxSuccess(files)"  on-box-cancel="onBoxCancel()">Box Picker</a></p>
             </div>
             <div class="col-sm-4 center-block">
                 <p><a class="btn btn-primary btn-block">Fork me</a></p>
@@ -52,7 +52,7 @@
 
     <!-- jQuery (necessary for Bootstrap's JavaScript plugins) -->
     <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.11.1/jquery.min.js"></script>
-    <script src="http://ajax.googleapis.com/ajax/libs/angularjs/1.2.26/angular.min.js"></script>
+    <script src="https://ajax.googleapis.com/ajax/libs/angularjs/1.5.8/angular.min.js"></script>
     <!-- Include all compiled plugins (below), or include individual files as needed -->
     <script src="//maxcdn.bootstrapcdn.com/bootstrap/3.2.0/js/bootstrap.min.js"></script>
     <script type="text/javascript" src="https://app.box.com/js/static/select.js"></script>

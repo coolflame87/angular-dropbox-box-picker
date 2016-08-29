@@ -1,7 +1,26 @@
 {
-"name": "angular-dropbox-picker",
-"version": "0.0.1",
-"description": "An AngularJs directive that interact with the Dropbox Picker",
-"author": "Geo Jacob <geojacobm6@gmail.com> (http://www.geomanthra.com)",
-"devDependencies": { }
+  "name": "angular-dropbox-picker",
+  "version": "0.0.2",
+  "description": "An AngularJs directive that interact with the Dropbox/Box Picker",
+  "author": "Samar Haider <s.samar_haider@yahoo.com> (https://ssamarhaider.wordpress.com/about/)",
+  "devDependencies": {},
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/samarhaider/angular-dropbox-box-picker.git"
+  },
+  "keywords": [
+    "angular-dropbox",
+    "angular-box",
+    "dropbox",
+    "box"
+  ],
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/samarhaider/angular-dropbox-box-picker/issues"
+  },
+  "homepage": "https://github.com/samarhaider/angular-dropbox-box-picker#readme"
 }

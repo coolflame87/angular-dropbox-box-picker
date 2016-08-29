@@ -6,12 +6,28 @@ A simple and cool angular directive which interacts with box and dropbox file pi
 Demo
 ==========================
 
-http://geojacobm6.github.io/angular-dropbox-box-picker/
+https://samarhaider.github.io/angular-dropbox-box-picker/app/
 
 Installation
 ==========================
 
-Download https://github.com/geojacobm6/angular-dropbox-box-picker/archive/master.zip
+1. Using NPM (recommended)
+
+  ```bash
+  npm install angular-dropbox-picker --save
+  ```
+
+2. Using Bower
+
+  ```Bash
+  bower install angular-dropbox-picker --save
+  ```
+
+3. Manually
+
+Download [https://github.com/samarhaider/angular-dropbox-box-picker/archive/master.zip](https://github.com/samarhaider/angular-dropbox-box-picker/archive/master.zip)
+
+
 
 Usage
 ==========================
@@ -60,20 +76,34 @@ Usage
  
       .controller('DropBoxCtrl', ['$scope', 'DropBoxSettings', function($scope, DropBoxSettings) {
    
-        $scope.dpfiles = []; // dropbox files will be here
-        
-        $scope.boxfiles = []; // box files will be here
+        $scope.onDropboxSuccess = function (files) {
+            angular.forEach(files, function (file, index) {
+                console.log(file);
+            });
+        }
+        $scope.onDropboxCancel = function () {
+            console.log('Dropbox close/cancel!');
+        }
+
+        $scope.onBoxSuccess = function (files) {
+            angular.forEach(files, function (file, index) {
+                console.log(file);
+            });
+        }
+        $scope.onBoxCancel = function () {
+            console.log('Box close/cancel!');
+        }
       }]);   
 
  5. Add the directive to your HTML element
  
     Dropbox:
       
-          <a href="javascript:;" drop-box-picker dbpicker-files="dpfiles">Dropbox Picker</a>
+          <a href="javascript:;" drop-box-picker on-dropbox-success="onDropboxSuccess(files)"  on-dropbox-cancel="onDropboxCancel()">Dropbox Picker</a>
 
     Box:
     
-          <a href="javascript:;" box-picker boxpicker-files="boxfiles">Box Picker</a>
+          <a href="javascript:;" box-picker on-box-success="onBoxSuccess(files)"  on-box-cancel="onBoxCancel()">Box Picker</a>
           
  6. Done.
 
